@@ -14,6 +14,7 @@ namespace WebForm
         {
             if (!IsPostBack)
             {
+
                 var listUser = BindGridView();
                 GridViewUsuarios.DataSource = listUser;
                 GridViewUsuarios.DataBind();

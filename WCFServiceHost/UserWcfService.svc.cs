@@ -12,7 +12,6 @@ namespace WCFServiceHost
 {
     public class UserWcfService : IUserWcfService
     {
-
         public List<UserWcf> GetAllUsers()
         {
 
@@ -60,14 +59,12 @@ namespace WCFServiceHost
 
 
         }
-
         public UserWcf GetUserById(int productId)
         {
             UserWcf user = new UserWcf();
 
             return user;
         }
-
         public void AddUser(UserWcf user)
         {
             //Recupera os dados do DB para DEV e HOM no Webconfig

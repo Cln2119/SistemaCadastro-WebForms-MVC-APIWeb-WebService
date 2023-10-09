@@ -83,14 +83,15 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <Content Include="CSS\ajuste-forms.css" />
-    <Content Include="CSS\bootstrap-datetimepicker.css" />
-    <Content Include="CSS\bootstrap-formhelpers.min.css" />
-    <Content Include="CSS\bootstrap-menu.css" />
-    <Content Include="CSS\bootstrap.min.css" />
-    <Content Include="CSS\css-core.css" />
-    <Content Include="CSS\formulario-style.css" />
-    <Content Include="CSS\layout.css" />
+    <Content Include="css\ajuste-forms.css" />
+    <Content Include="css\bootstrap-datetimepicker.css" />
+    <Content Include="css\bootstrap-formhelpers.min.css" />
+    <Content Include="css\bootstrap-menu.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\css-core.css" />
+    <Content Include="css\formulario-style.css" />
+    <Content Include="css\layout.css" />
+    <Content Include="javascript\script.js" />
     <Content Include="User.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
