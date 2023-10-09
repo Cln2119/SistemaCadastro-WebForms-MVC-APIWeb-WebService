@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WCFServiceHost.Classe" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WCFServiceHost.Classe" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfUserWcf">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserWcf" nillable="true" type="tns:UserWcf" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserWcf" nillable="true" type="tns:ArrayOfUserWcf" />
+  <xs:complexType name="UserWcf">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CpfCnpj" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateAt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="tns:Mensagem" />
+      <xs:element minOccurs="0" name="UpdateAt" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserWcf" nillable="true" type="tns:UserWcf" />
+  <xs:complexType name="Mensagem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MoreInformation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Mensagem" nillable="true" type="tns:Mensagem" />
+</xs:schema>

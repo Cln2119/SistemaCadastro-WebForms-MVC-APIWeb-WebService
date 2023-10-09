@@ -1,0 +1,28 @@
+C:\Projetos\GTISolution\TesteCandidato\WebForms\bin\WebForm.dll.config
+C:\Projetos\GTISolution\TesteCandidato\WebForms\bin\WebForm.dll
+C:\Projetos\GTISolution\TesteCandidato\WebForms\bin\WebForm.pdb
+C:\Projetos\GTISolution\TesteCandidato\WebForms\obj\Debug\WebForm.csprojAssemblyReference.cache
+C:\Projetos\GTISolution\TesteCandidato\WebForms\obj\Debug\WebForm.csproj.CoreCompileInputs.cache
+C:\Projetos\GTISolution\TesteCandidato\WebForms\obj\Debug\WebForm.dll
+C:\Projetos\GTISolution\TesteCandidato\WebForms\obj\Debug\WebForm.pdb
+D:\Documentos_Projetos\GTISolution\Testes Candidatos\ModeloProjeto\WebForms\bin\WebForm.dll.config
+D:\Documentos_Projetos\GTISolution\Testes Candidatos\ModeloProjeto\WebForms\bin\WebForm.dll
+D:\Documentos_Projetos\GTISolution\Testes Candidatos\ModeloProjeto\WebForms\bin\WebForm.pdb
+D:\Documentos_Projetos\GTISolution\Testes Candidatos\ModeloProjeto\WebForms\obj\Debug\WebForm.csprojAssemblyReference.cache
+D:\Documentos_Projetos\GTISolution\Testes Candidatos\ModeloProjeto\WebForms\obj\Debug\WebForm.csproj.CoreCompileInputs.cache
+D:\Documentos_Projetos\GTISolution\Testes Candidatos\ModeloProjeto\WebForms\obj\Debug\WebForm.dll
+D:\Documentos_Projetos\GTISolution\Testes Candidatos\ModeloProjeto\WebForms\obj\Debug\WebForm.pdb
+C:\Users\cleyt\Documents\teste-gti\GTI Solution - Processo .NET\ModeloProjeto (1)\ModeloProjeto\WebForms\bin\WebForm.dll.config
+C:\Users\cleyt\Documents\teste-gti\GTI Solution - Processo .NET\ModeloProjeto (1)\ModeloProjeto\WebForms\bin\WebForm.dll
+C:\Users\cleyt\Documents\teste-gti\GTI Solution - Processo .NET\ModeloProjeto (1)\ModeloProjeto\WebForms\bin\WebForm.pdb
+C:\Users\cleyt\Documents\teste-gti\GTI Solution - Processo .NET\ModeloProjeto (1)\ModeloProjeto\WebForms\obj\Debug\WebForm.csproj.CoreCompileInputs.cache
+C:\Users\cleyt\Documents\teste-gti\GTI Solution - Processo .NET\ModeloProjeto (1)\ModeloProjeto\WebForms\obj\Debug\WebForm.dll
+C:\Users\cleyt\Documents\teste-gti\GTI Solution - Processo .NET\ModeloProjeto (1)\ModeloProjeto\WebForms\obj\Debug\WebForm.pdb
+C:\Users\cleyt\Documents\teste-gti\GTI Solution - Processo .NET\ModeloProjeto (1)\ModeloProjeto\WebForms\obj\Debug\WebForm.csproj.AssemblyReference.cache
+C:\git\teste-gti\WebForms\obj\Debug\WebForm.csproj.AssemblyReference.cache
+C:\git\teste-gti\WebForms\obj\Debug\WebForm.csproj.CoreCompileInputs.cache
+C:\git\teste-gti\WebForms\bin\WebForm.dll.config
+C:\git\teste-gti\WebForms\bin\WebForm.dll
+C:\git\teste-gti\WebForms\bin\WebForm.pdb
+C:\git\teste-gti\WebForms\obj\Debug\WebForm.dll
+C:\git\teste-gti\WebForms\obj\Debug\WebForm.pdb

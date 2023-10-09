@@ -1,0 +1,28 @@
+C:\Projetos\GTISolution\TesteCandidato\WCFServiceHost\bin\WCFServiceHost.dll.config
+C:\Projetos\GTISolution\TesteCandidato\WCFServiceHost\bin\WCFServiceHost.dll
+C:\Projetos\GTISolution\TesteCandidato\WCFServiceHost\bin\WCFServiceHost.pdb
+C:\Projetos\GTISolution\TesteCandidato\WCFServiceHost\obj\Debug\WCFServiceHost.csprojAssemblyReference.cache
+C:\Projetos\GTISolution\TesteCandidato\WCFServiceHost\obj\Debug\WCFServiceHost.csproj.CoreCompileInputs.cache
+C:\Projetos\GTISolution\TesteCandidato\WCFServiceHost\obj\Debug\WCFServiceHost.dll
+C:\Projetos\GTISolution\TesteCandidato\WCFServiceHost\obj\Debug\WCFServiceHost.pdb
+D:\Documentos_Projetos\GTISolution\Testes Candidatos\ModeloProjeto\WCFServiceHost\bin\WCFServiceHost.dll.config
+D:\Documentos_Projetos\GTISolution\Testes Candidatos\ModeloProjeto\WCFServiceHost\bin\WCFServiceHost.dll
+D:\Documentos_Projetos\GTISolution\Testes Candidatos\ModeloProjeto\WCFServiceHost\bin\WCFServiceHost.pdb
+D:\Documentos_Projetos\GTISolution\Testes Candidatos\ModeloProjeto\WCFServiceHost\obj\Debug\WCFServiceHost.csprojAssemblyReference.cache
+D:\Documentos_Projetos\GTISolution\Testes Candidatos\ModeloProjeto\WCFServiceHost\obj\Debug\WCFServiceHost.csproj.CoreCompileInputs.cache
+D:\Documentos_Projetos\GTISolution\Testes Candidatos\ModeloProjeto\WCFServiceHost\obj\Debug\WCFServiceHost.dll
+D:\Documentos_Projetos\GTISolution\Testes Candidatos\ModeloProjeto\WCFServiceHost\obj\Debug\WCFServiceHost.pdb
+C:\Users\cleyt\Documents\teste-gti\GTI Solution - Processo .NET\ModeloProjeto (1)\ModeloProjeto\WCFServiceHost\bin\WCFServiceHost.dll.config
+C:\Users\cleyt\Documents\teste-gti\GTI Solution - Processo .NET\ModeloProjeto (1)\ModeloProjeto\WCFServiceHost\bin\WCFServiceHost.dll
+C:\Users\cleyt\Documents\teste-gti\GTI Solution - Processo .NET\ModeloProjeto (1)\ModeloProjeto\WCFServiceHost\bin\WCFServiceHost.pdb
+C:\Users\cleyt\Documents\teste-gti\GTI Solution - Processo .NET\ModeloProjeto (1)\ModeloProjeto\WCFServiceHost\obj\Debug\WCFServiceHost.csproj.AssemblyReference.cache
+C:\Users\cleyt\Documents\teste-gti\GTI Solution - Processo .NET\ModeloProjeto (1)\ModeloProjeto\WCFServiceHost\obj\Debug\WCFServiceHost.csproj.CoreCompileInputs.cache
+C:\Users\cleyt\Documents\teste-gti\GTI Solution - Processo .NET\ModeloProjeto (1)\ModeloProjeto\WCFServiceHost\obj\Debug\WCFServiceHost.dll
+C:\Users\cleyt\Documents\teste-gti\GTI Solution - Processo .NET\ModeloProjeto (1)\ModeloProjeto\WCFServiceHost\obj\Debug\WCFServiceHost.pdb
+C:\git\teste-gti\WCFServiceHost\bin\WCFServiceHost.dll.config
+C:\git\teste-gti\WCFServiceHost\bin\WCFServiceHost.dll
+C:\git\teste-gti\WCFServiceHost\bin\WCFServiceHost.pdb
+C:\git\teste-gti\WCFServiceHost\obj\Debug\WCFServiceHost.csproj.AssemblyReference.cache
+C:\git\teste-gti\WCFServiceHost\obj\Debug\WCFServiceHost.csproj.CoreCompileInputs.cache
+C:\git\teste-gti\WCFServiceHost\obj\Debug\WCFServiceHost.dll
+C:\git\teste-gti\WCFServiceHost\obj\Debug\WCFServiceHost.pdb
