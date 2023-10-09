@@ -89,6 +89,7 @@
     <Content Include="CSS\bootstrap-menu.css" />
     <Content Include="CSS\bootstrap.min.css" />
     <Content Include="CSS\css-core.css" />
+    <Content Include="CSS\formulario-style.css" />
     <Content Include="CSS\layout.css" />
     <Content Include="User.aspx" />
     <Content Include="Web.config" />

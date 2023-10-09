@@ -93,13 +93,53 @@ namespace WCFServiceHost
                 conexao.Close();
             }
         }
-        public void UpdateUser(UserWcf product)
+        public void UpdateUser(UserWcf user)
         {
-            // Implemente a lógica para atualizar um produto no banco de dados
+            //Recupera os dados do DB para DEV e HOM no Webconfig
+            var connectionString = ConfigurationManager.ConnectionStrings["DevConnection"].ConnectionString;
+
+            using (SqlConnection conexao = new SqlConnection(connectionString))
+            {
+                conexao.Open();
+
+                //Montagem da tabela
+                string sqlQuery = "UPDATE Usuarios SET Nome = @Nome , Email = @Email , CpfCnpj = @CpfCnpj, UpdateAt = @UpdateAt WHERE ID = @Id";
+
+                using (SqlCommand comando = new SqlCommand(sqlQuery, conexao))
+                {
+                    comando.Parameters.AddWithValue("@Id", user.Id);
+                    comando.Parameters.AddWithValue("@Nome", user.Nome);
+                    comando.Parameters.AddWithValue("@Email", user.Email);
+                    comando.Parameters.AddWithValue("@CpfCnpj", user.CpfCnpj);
+                    comando.Parameters.AddWithValue("@CreateAt", user.CreateAt);
+                    comando.Parameters.AddWithValue("@UpdateAt", user.UpdateAt);                    
+                    comando.ExecuteNonQuery();
+                }
+
+                conexao.Close();
+            }
         }
-        public void DeleteUser(int productId)
+        public void DeleteUser(int id)
         {
-            // Implemente a lógica para excluir um produto do banco de dados
+            //Recupera os dados do DB para DEV e HOM no Webconfig
+            var connectionString = ConfigurationManager.ConnectionStrings["DevConnection"].ConnectionString;
+
+            using (SqlConnection conexao = new SqlConnection(connectionString))
+            {
+                conexao.Open();
+
+                //Montagem da tabela
+                string sqlQuery = "DELETE FROM Usuarios WHERE ID = @Id";
+
+                using (SqlCommand comando = new SqlCommand(sqlQuery, conexao))
+                {
+                    comando.Parameters.AddWithValue("@Id", id);
+                
+                    comando.ExecuteNonQuery();
+                }
+
+                conexao.Close();
+            }
         }
     }
 }
