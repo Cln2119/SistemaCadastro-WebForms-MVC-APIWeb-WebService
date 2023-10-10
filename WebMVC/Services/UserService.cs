@@ -76,6 +76,63 @@ namespace WebMVC.Services
             }
 
         }
+        public async Task<string> PutUserAsync(UserFrontRequest user)
+        {
+            string retornoErroStatusCode = string.Empty;
+            string retornoErroPhrase = string.Empty;
+            HttpResponseMessage response = new HttpResponseMessage();
+            Credentials dados = new Credentials();
+
+            _logger.LogInformation("{0} - Montanto dados da chamada...", LogId);
+            dados.BaseUrl = _configuration.GetSection("BaseUrl").Value;
+
+            try
+            {
+
+                string json = JsonConvert.SerializeObject(user);
+
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+                var handler = new HttpClientHandler();
+
+                using (HttpClient client = new HttpClient(handler))
+                {
+                    _logger.LogInformation("{0} - Verificação do certificado", LogId);
+                    handler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => { return true; };
+
+                    _logger.LogInformation("{0} - Adicionando Content...", LogId);
+
+                    _logger.LogInformation("{0} - Realizando chamada do servico....", LogId);
+                    response = await client.PutAsync(dados.BaseUrl, content);
+                    _logger.LogInformation("{0} - retorno dos dados do servico... " + response.StatusCode + response.ReasonPhrase, LogId);
+
+                    string stringData = string.Empty;
+                    retornoErroStatusCode = response.StatusCode.ToString();
+                    retornoErroPhrase = response.ReasonPhrase;
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        stringData = response.Content.ReadAsStringAsync().Result;
+                        _logger.LogInformation("{0} - retorno dos dados com sucesso. Response: " + response.RequestMessage + " Url: " + dados.BaseUrl, LogId);
+                    }
+                    else
+                    {
+                        stringData = response.ReasonPhrase;
+                        _logger.LogInformation("{0} - Falha ao retornar dados. Mais detalhes: " + " Status Code: " + response.StatusCode + " Descrição: " + response.ReasonPhrase + " Url: " + dados.BaseUrl, LogId);
+                    }
+
+                    return stringData;
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogInformation("{0} - falha ao retornar dados. Mais detalhes: "
+                    + response.ReasonPhrase);
+
+                return "Falha ao montar ou retornar dados. Mais detalhes: " + ex.Message;
+            }
+
+        }
         public async Task<string> GetAllUserAsync()
         {
             string retornoErroStatusCode = string.Empty;
@@ -128,7 +185,6 @@ namespace WebMVC.Services
             }
 
         }
-
         public async Task<string> DeleteUserAsync(UserFront user)
         {
             string retornoErroStatusCode = string.Empty;

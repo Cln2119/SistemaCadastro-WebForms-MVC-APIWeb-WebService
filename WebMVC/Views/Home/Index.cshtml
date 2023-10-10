@@ -7,10 +7,11 @@
 }
 
 <div class=container>
-
+    <h2>Formulário Usuarios</h2> 
+        <p>Clique no botão abaixo para adicionar ou na lista para editar:</p>
 </div>
 <div class=container>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"> <i class="fa fa-plus"></i> Add New</button><br /><br />
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"> <i class="fa fa-plus"></i> Adicionar</button><br /><br />
     <table class="table" id="tblCustomers">
         <thead>
             <tr>
@@ -30,7 +31,7 @@
                     <td>@Html.DisplayFor(modelItem => item.Email)</td>
                     <td>@Html.DisplayFor(modelItem => item.CpfCnpj)</td>
                     <td>
-                        <a class='btn btn-primary btn-sm' id='btnEdit' data-target="#myModalEditar"><i class='fa fa-pencil'></i> Edit</a>
+                        <a class='btn btn-primary btn-sm' href="@Url.Action("EditarUsuario","Home")/@item.Id" ><i class='fa fa-pencil'></i> Edit</a>
                         <a href="@Url.Action("DeleteUser","Home")/@item.Id"  onclick="return confirm('Deseja exluir esse registro?')"
                            class='btn btn-danger btn-sm' id='btnDelete' style='margin-left:5px'><i class='fa fa-trash'></i> Delete</a>
                     </td>
@@ -71,62 +72,5 @@
                 </div>
             </div>
         </div>
-    }
-    @using (Html.BeginForm("Index", "Home", FormMethod.Post))
-    {
-        <div id="myModalEditar" class="modal" tabindex="-1" role="dialog">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Editar dados Usuário</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <input type="hidden" id="hfId" name="id" />
-                            <label>Name:</label>
-                            <input type="text" id="txtNome" name="name" value="" class="form-control" />
-                        </div>
-                        <div class="form-group">
-                            <label>Email:</label>
-                            <input type="text" id="txtEmail" name="country" value="" class="form-control" />
-                        </div>
-                        <div class="form-group">
-                            <label>CPF/CNPJ:</label>
-                            <input type="text" id="txtCpfCnpj" name="country" value="" class="form-control" />
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary">Salvar</button>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    }
+    }       
 </div>
-
-<script type="text/javascript">
-        $(function () {
-            $("#tblCustomers").dataTable();
-            $('[id*=btnEdit]').on('click', function () {
-                var tds = $(this).closest('tr').find('td');
-                $('#hfId').val($(tds).eq(0).html());
-                $('#txtName').val($(tds).eq(1).html());
-                $('#txtCountry').val($(tds).eq(2).html());
-                $('#myModal').modal('show');
-            });
-        });
-         $(function () {
-            $("#tblCustomers").dataTable();
-            $('[id*=btnEdit]').on('click', function () {
-                var tds = $(this).closest('tr').find('td');
-                $('#hfId').val($(tds).eq(0).html());
-                $('#txtName').val($(tds).eq(1).html());
-                $('#txtCountry').val($(tds).eq(2).html());
-                $('#myModalEditar').modal('show');
-            });
-        });
-    </script>

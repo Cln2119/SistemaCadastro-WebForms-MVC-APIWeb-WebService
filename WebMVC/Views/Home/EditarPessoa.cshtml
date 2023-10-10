@@ -1,0 +1,33 @@
+﻿@model  UserFront
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class=container>
+      @using (Html.BeginForm("SalvarEdicaoUsuario", "Home", FormMethod.Post))
+    {
+         <div class="container">
+        <h2>Editar Usuário</h2> 
+        <p>Edite os dados do usuário nos campos abaixo:</p>
+            <div class="form-group">
+                <label for="nome">Id:</label>
+                <input type="text" class="form-control" name="id" value="@Model.Id" />
+            </div>
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" class="form-control" name="nome" value="@Model.Nome" placeholder="Digite o nome">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" name="email" value="@Model.Email" placeholder="Digite o email">
+            </div>
+            <div class="form-group">
+                <label for="cpfCnpj">CPF/CNPJ:</label>
+                <input type="text" class="form-control" name="cpfCnpj" value="@Model.CpfCnpj" placeholder="Digite o CPF ou CNPJ">
+            </div>
+            <button type="submit" class="btn btn-primary">Salvar</button>      
+            <button type="button" class="btn btn-secondary" onclick="window.history.back();">Voltar</button>
+    </div>
+    }
+</div>

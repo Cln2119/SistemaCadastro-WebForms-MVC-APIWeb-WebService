@@ -41,7 +41,6 @@ namespace WebMVC.Controllers
             }
            
         }
-
         public async Task<IActionResult> PostUser(string nome, string email, string cpfCnpj)
         {
             var userRequest = new UserFrontRequest
@@ -56,11 +55,10 @@ namespace WebMVC.Controllers
             var result = await _userService.CreateUserAsync(userRequest);
 
             if (result == null)
-                return BadRequest();
+                return BadRequest(result);
             
             return RedirectToAction("Index", "Home");
         }
-
         public async Task<IActionResult> DeleteUser(UserFront userId)
         {
             
@@ -69,6 +67,41 @@ namespace WebMVC.Controllers
             if (result == null)
                 return BadRequest();
            
+            return RedirectToAction("Index", "Home");
+        }
+        public async Task<ActionResult> EditarUsuario(string id)
+        {
+            
+            var response = await _userService.GetAllUserAsync();
+            var listUsers = JsonConvert.DeserializeObject<List<UserFront>>(response);
+
+            var user = listUsers.FirstOrDefault(user => user.Id == int.Parse(id));
+
+            var userFront = new UserFront
+            {
+                Nome = user.Nome,
+                Email = user.Email,
+                Id = user.Id,
+                CpfCnpj = user.CpfCnpj
+            };   
+
+            return PartialView("~/Views/Home/EditarPessoa.cshtml", userFront);
+        }
+        public async Task<IActionResult> SalvarEdicaoUsuario(string nome, string email, string id, string cpfCnpj)
+        {
+            var userRequest = new UserFrontRequest
+            {
+                id = int.Parse(id),
+                nome = nome,
+                email = email,
+                cpfCnpj = cpfCnpj,               
+                updateAt = DateTime.UtcNow,
+            };
+            var response = await _userService.PutUserAsync(userRequest);
+
+            if(response == null)
+                return BadRequest(response);
+
             return RedirectToAction("Index", "Home");
         }
 
