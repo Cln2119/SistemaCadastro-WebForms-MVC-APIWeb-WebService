@@ -10,3 +10,10 @@ C:\git\teste-gti\GTI.CrossCutting\obj\Debug\net6.0\GTI.CrossCutting.dll
 C:\git\teste-gti\GTI.CrossCutting\obj\Debug\net6.0\refint\GTI.CrossCutting.dll
 C:\git\teste-gti\GTI.CrossCutting\obj\Debug\net6.0\GTI.CrossCutting.pdb
 C:\git\teste-gti\GTI.CrossCutting\obj\Debug\net6.0\ref\GTI.CrossCutting.dll
+C:\git\teste-gti\GTI.CrossCutting\bin\Debug\net6.0\GTI.Data.dll
+C:\git\teste-gti\GTI.CrossCutting\bin\Debug\net6.0\GTI.Domain.dll
+C:\git\teste-gti\GTI.CrossCutting\bin\Debug\net6.0\GTI.Services.dll
+C:\git\teste-gti\GTI.CrossCutting\bin\Debug\net6.0\GTI.Data.pdb
+C:\git\teste-gti\GTI.CrossCutting\bin\Debug\net6.0\GTI.Domain.pdb
+C:\git\teste-gti\GTI.CrossCutting\bin\Debug\net6.0\GTI.Services.pdb
+C:\git\teste-gti\GTI.CrossCutting\obj\Debug\net6.0\GTI.CrossCutting.csproj.CopyComplete

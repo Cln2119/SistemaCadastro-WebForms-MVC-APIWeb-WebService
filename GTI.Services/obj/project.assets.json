@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "GTI.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/GTI.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GTI.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "GTI.Domain/1.0.0": {
+      "type": "project",
+      "path": "../GTI.Domain/GTI.Domain.csproj",
+      "msbuildProject": "../GTI.Domain/GTI.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "GTI.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\cleyt\\.nuget\\packages\\": {},
@@ -38,7 +57,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\git\\teste-gti\\GTI.Domain\\GTI.Domain.csproj": {
+              "projectPath": "C:\\git\\teste-gti\\GTI.Domain\\GTI.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

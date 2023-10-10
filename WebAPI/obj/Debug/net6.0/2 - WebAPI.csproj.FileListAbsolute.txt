@@ -64,3 +64,10 @@ C:\git\teste-gti\WebAPI\bin\Debug\net6.0\GTI.Data.pdb
 C:\git\teste-gti\WebAPI\bin\Debug\net6.0\GTI.Domain.pdb
 C:\git\teste-gti\WebAPI\bin\Debug\net6.0\EntityFramework.SqlServer.dll
 C:\git\teste-gti\WebAPI\bin\Debug\net6.0\EntityFramework.dll
+C:\git\teste-gti\WebAPI\bin\Debug\net6.0\GTI.Services.dll
+C:\git\teste-gti\WebAPI\bin\Debug\net6.0\GTI.Services.pdb
+C:\git\teste-gti\WebAPI\bin\Debug\net6.0\AutoMapper.dll
+C:\git\teste-gti\WebAPI\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\git\teste-gti\WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\git\teste-gti\WebAPI\bin\Debug\net6.0\GTI.CrossCutting.dll
+C:\git\teste-gti\WebAPI\bin\Debug\net6.0\GTI.CrossCutting.pdb

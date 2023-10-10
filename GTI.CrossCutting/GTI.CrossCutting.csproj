@@ -6,4 +6,15 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GTI.Data\GTI.Data.csproj" />
+    <ProjectReference Include="..\GTI.Domain\GTI.Domain.csproj" />
+    <ProjectReference Include="..\GTI.Services\GTI.Services.csproj" />
+  </ItemGroup>
+
 </Project>

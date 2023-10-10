@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v6.0": {
       "GTI.Services/1.0.0": {
+        "dependencies": {
+          "GTI.Domain": "1.0.0"
+        },
         "runtime": {
           "GTI.Services.dll": {}
+        }
+      },
+      "GTI.Domain/1.0.0": {
+        "runtime": {
+          "GTI.Domain.dll": {}
         }
       }
     }
   },
   "libraries": {
     "GTI.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GTI.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

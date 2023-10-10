@@ -4,6 +4,84 @@
     "C:\\git\\teste-gti\\WebAPI\\2 - WebAPI.csproj": {}
   },
   "projects": {
+    "C:\\git\\teste-gti\\GTI.CrossCutting\\GTI.CrossCutting.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\git\\teste-gti\\GTI.CrossCutting\\GTI.CrossCutting.csproj",
+        "projectName": "GTI.CrossCutting",
+        "projectPath": "C:\\git\\teste-gti\\GTI.CrossCutting\\GTI.CrossCutting.csproj",
+        "packagesPath": "C:\\Users\\cleyt\\.nuget\\packages\\",
+        "outputPath": "C:\\git\\teste-gti\\GTI.CrossCutting\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\cleyt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\git\\teste-gti\\GTI.Data\\GTI.Data.csproj": {
+                "projectPath": "C:\\git\\teste-gti\\GTI.Data\\GTI.Data.csproj"
+              },
+              "C:\\git\\teste-gti\\GTI.Domain\\GTI.Domain.csproj": {
+                "projectPath": "C:\\git\\teste-gti\\GTI.Domain\\GTI.Domain.csproj"
+              },
+              "C:\\git\\teste-gti\\GTI.Services\\GTI.Services.csproj": {
+                "projectPath": "C:\\git\\teste-gti\\GTI.Services\\GTI.Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\git\\teste-gti\\GTI.Data\\GTI.Data.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -150,6 +228,68 @@
         }
       }
     },
+    "C:\\git\\teste-gti\\GTI.Services\\GTI.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\git\\teste-gti\\GTI.Services\\GTI.Services.csproj",
+        "projectName": "GTI.Services",
+        "projectPath": "C:\\git\\teste-gti\\GTI.Services\\GTI.Services.csproj",
+        "packagesPath": "C:\\Users\\cleyt\\.nuget\\packages\\",
+        "outputPath": "C:\\git\\teste-gti\\GTI.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\cleyt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\git\\teste-gti\\GTI.Domain\\GTI.Domain.csproj": {
+                "projectPath": "C:\\git\\teste-gti\\GTI.Domain\\GTI.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\git\\teste-gti\\WebAPI\\2 - WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -178,11 +318,17 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "C:\\git\\teste-gti\\GTI.CrossCutting\\GTI.CrossCutting.csproj": {
+                "projectPath": "C:\\git\\teste-gti\\GTI.CrossCutting\\GTI.CrossCutting.csproj"
+              },
               "C:\\git\\teste-gti\\GTI.Data\\GTI.Data.csproj": {
                 "projectPath": "C:\\git\\teste-gti\\GTI.Data\\GTI.Data.csproj"
               },
               "C:\\git\\teste-gti\\GTI.Domain\\GTI.Domain.csproj": {
                 "projectPath": "C:\\git\\teste-gti\\GTI.Domain\\GTI.Domain.csproj"
+              },
+              "C:\\git\\teste-gti\\GTI.Services\\GTI.Services.csproj": {
+                "projectPath": "C:\\git\\teste-gti\\GTI.Services\\GTI.Services.csproj"
               }
             }
           }
@@ -197,6 +343,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",

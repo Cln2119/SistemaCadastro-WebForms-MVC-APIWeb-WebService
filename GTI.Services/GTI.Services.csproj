@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\GTI.Domain\GTI.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
