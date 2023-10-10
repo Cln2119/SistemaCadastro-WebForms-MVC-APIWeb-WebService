@@ -57,45 +57,19 @@ namespace WebMVC.Controllers
 
             if (result == null)
                 return BadRequest();
-
-            var response = await _userService.GetAllUserAsync();
-
-            if (response == null)
-                return NotFound();
-
-            var user = new UserFront();
-            var listUsers = JsonConvert.DeserializeObject<List<UserFront>>(response);
-
-            var dados = new Tuple<List<UserFront>, UserFront>(listUsers, user);
-            return View(dados);
+            
+            return RedirectToAction("Index", "Home");
         }
 
-        public async Task<IActionResult> DeleteUser(string id)
+        public async Task<IActionResult> DeleteUser(UserFront userId)
         {
-            var userRequest = new UserFrontRequest
-            {
-                nome = nome,
-                email = email,
-                cpfCnpj = cpfCnpj,
-                createAt = DateTime.UtcNow,
-                updateAt = DateTime.UtcNow,
-            };
-
-            var result = await _userService.CreateUserAsync(userRequest);
+            
+            var result = await _userService.DeleteUserAsync(userId);
 
             if (result == null)
                 return BadRequest();
-
-            var response = await _userService.GetAllUserAsync();
-
-            if (response == null)
-                return NotFound();
-
-            var user = new UserFront();
-            var listUsers = JsonConvert.DeserializeObject<List<UserFront>>(response);
-
-            var dados = new Tuple<List<UserFront>, UserFront>(listUsers, user);
-            return View(dados);
+           
+            return RedirectToAction("Index", "Home");
         }
 
     }

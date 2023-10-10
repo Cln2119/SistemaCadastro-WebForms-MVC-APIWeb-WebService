@@ -31,7 +31,7 @@
                     <td>@Html.DisplayFor(modelItem => item.CpfCnpj)</td>
                     <td>
                         <a class='btn btn-primary btn-sm' id='btnEdit' data-target="#myModalEditar"><i class='fa fa-pencil'></i> Edit</a>
-                        <a href="@Url.Action("DeleteCustomer","Home")/@item.Id"  onclick="return confirm('Do you want to delete this record?')"
+                        <a href="@Url.Action("DeleteUser","Home")/@item.Id"  onclick="return confirm('Deseja exluir esse registro?')"
                            class='btn btn-danger btn-sm' id='btnDelete' style='margin-left:5px'><i class='fa fa-trash'></i> Delete</a>
                     </td>
                 </tr>

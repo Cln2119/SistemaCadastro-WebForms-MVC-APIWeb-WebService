@@ -8,5 +8,6 @@ namespace WebMVC.Domain.Interfaces.Services
         string LogId { get; set; }
         Task<string> CreateUserAsync(UserFrontRequest user);
         Task<string> GetAllUserAsync();
+        Task<string> DeleteUserAsync(UserFront user);
     }
 }
