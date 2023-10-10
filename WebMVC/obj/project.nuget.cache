@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "/+kIjTW7hfTa7jXGldKJB1/iHBMUqB0EZch4rI7SM1ghF7L1HZQ78uyxeqaDZRW1WCK27NezNTQnu/dTO4NxOw==",
+  "dgSpecHash": "7emqH9JsLr64uxtqspzxN8JTkEaQn1cBHRcEiQfIn7tslARvt08ZImGec8nB4fbfzKoQ0Kq9yvfRe3JTjQ0wHQ==",
   "success": true,
   "projectFilePath": "C:\\git\\teste-gti\\WebMVC\\3 - WebMVC.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\cleyt\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -24,3 +24,5 @@ C:\git\teste-gti\WebMVC\obj\Debug\net6.0\refint\3 - WebMVC.dll
 C:\git\teste-gti\WebMVC\obj\Debug\net6.0\3 - WebMVC.pdb
 C:\git\teste-gti\WebMVC\obj\Debug\net6.0\3 - WebMVC.genruntimeconfig.cache
 C:\git\teste-gti\WebMVC\obj\Debug\net6.0\ref\3 - WebMVC.dll
+C:\git\teste-gti\WebMVC\obj\Debug\net6.0\3 - WebMVC.csproj.CopyComplete
+C:\git\teste-gti\WebMVC\bin\Debug\net6.0\Newtonsoft.Json.dll
