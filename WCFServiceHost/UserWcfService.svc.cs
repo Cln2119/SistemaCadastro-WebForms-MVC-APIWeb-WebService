@@ -59,11 +59,47 @@ namespace WCFServiceHost
 
 
         }
-        public UserWcf GetUserById(int productId)
+        public UserWcf GetUserById(int id)
         {
+            //Recupera os dados do DB para DEV e HOM no Webconfig
+            var connectionString = ConfigurationManager.ConnectionStrings["DevConnection"].ConnectionString;
+
             UserWcf user = new UserWcf();
 
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                //Abertura de conexão com o DB
+                connection.Open();
+
+                //Montagem da tabela
+                string sqlQuery = "SELECT * FROM Usuarios WHERE ID = @Id";
+
+                //Inicio da configuração de conexao com DB
+                using (SqlCommand comando = new SqlCommand(sqlQuery, connection))
+                {
+                    comando.Parameters.AddWithValue("@Id", id);
+                    using (SqlDataReader reader = comando.ExecuteReader())
+                    {
+                        reader.Read();
+
+                            //Monta retorno em objeto
+                            user = new UserWcf
+                            {
+                                Id = (int)reader["Id"],
+                                Nome = reader["Nome"].ToString(),
+                                Email = reader["Email"].ToString(),
+                                CpfCnpj = reader["CpfCnpj"].ToString(),
+                                CreateAt = reader["CreateAt"].ToString(),
+                                UpdateAt = reader["UpdateAt"].ToString()
+                            };                        
+                    }
+                }
+                //Fechando conexão com DB
+                connection.Close();
+            }
+
             return user;
+
         }
         public void AddUser(UserWcf user)
         {
