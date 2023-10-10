@@ -130,5 +130,82 @@ namespace WebAPI.Controllers
             }
         }
 
+        /// <summary>
+        /// Realiza a busca da media
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        /// ///
+        /// 
+        ///    DELETE/Users/1    
+        ///    
+        ///
+        /// </remarks>
+        /// <param name="media"></param>
+        /// <response code="200">Retorna se o usuário foi deletado</response>
+        /// <response code="400">Retorna as informações em relação aos campos obrigatórios </response>
+        /// <response code="404">Retorna que a pagina não foi encontrada </response>
+        /// /// <response code="500">Erro no servidor </response>
+
+        [HttpDelete("{id}")]        
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> Delete(int id)
+        {
+            try
+            {
+                var result = await _service.Delete(id);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// Realiza a busca da media
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        /// ///
+        /// 
+        ///     PUT/Users
+        ///     {
+        ///      "Nome": "Teste",
+        ///      "Email": "teste@email.com",
+        ///      "CpfCnpj: "00000000000"
+        ///     }
+        ///    
+        ///
+        /// </remarks>
+        /// <param name="media"></param>
+        /// <response code="200">Retorna os dados alterados no banco</response>
+        /// <response code="400">Retorna as informações em relação aos campos obrigatórios </response>
+        /// <response code="404">Retorna que a pagina não foi encontrada </response>
+        /// /// <response code="500">Erro no servidor </response>
+
+        [HttpPut]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> Put(UserEntity user)
+        {
+            try
+            {
+                var result = await _service.Put(user);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
     }
 }
