@@ -1,18 +1,26 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32106.194
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFServiceHost", "WCFServiceHost\WCFServiceHost.csproj", "{6191FAFE-22B6-4BF8-85C6-61408C4BEF27}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0 - WCFServiceHost", "WCFServiceHost\0 - WCFServiceHost.csproj", "{6191FAFE-22B6-4BF8-85C6-61408C4BEF27}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "WebAPI\WebAPI.csproj", "{40532879-1418-4B2B-B91E-E1B7917A96B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3 - WebMVC", "WebMVC\3 - WebMVC.csproj", "{E24987B0-3704-4C5B-A596-602C01D75F8E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebMVC", "WebMVC\WebMVC.csproj", "{E24987B0-3704-4C5B-A596-602C01D75F8E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebForm", "WebFormGTI\WebForm.csproj", "{B353C825-F5CB-4D35-9960-5FF2BD73EEB2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1 - WebForm", "WebFormGTI\1 - WebForm.csproj", "{B353C825-F5CB-4D35-9960-5FF2BD73EEB2}"
 	ProjectSection(ProjectDependencies) = postProject
 		{6191FAFE-22B6-4BF8-85C6-61408C4BEF27} = {6191FAFE-22B6-4BF8-85C6-61408C4BEF27}
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GTI.Domain", "GTI.Domain\GTI.Domain.csproj", "{4C9D833B-18CF-4F1B-8732-03DCD356D6E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GTI.Data", "GTI.Data\GTI.Data.csproj", "{E50AEF30-A67C-4751-9719-6678A1E19F2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GTI.CrossCutting", "GTI.CrossCutting\GTI.CrossCutting.csproj", "{F336B2DF-669E-41E6-AAA1-91BB20803B9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GTI.Services", "GTI.Services\GTI.Services.csproj", "{5699F266-FBA1-4F39-8F46-E549ACE18F7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2 - WebAPI", "WebAPI\2 - WebAPI.csproj", "{69308DA6-8D6A-4159-A223-6923562937BB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,10 +32,6 @@ Global
 		{6191FAFE-22B6-4BF8-85C6-61408C4BEF27}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6191FAFE-22B6-4BF8-85C6-61408C4BEF27}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6191FAFE-22B6-4BF8-85C6-61408C4BEF27}.Release|Any CPU.Build.0 = Release|Any CPU
-		{40532879-1418-4B2B-B91E-E1B7917A96B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{40532879-1418-4B2B-B91E-E1B7917A96B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{40532879-1418-4B2B-B91E-E1B7917A96B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{40532879-1418-4B2B-B91E-E1B7917A96B2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E24987B0-3704-4C5B-A596-602C01D75F8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E24987B0-3704-4C5B-A596-602C01D75F8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E24987B0-3704-4C5B-A596-602C01D75F8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -36,6 +40,26 @@ Global
 		{B353C825-F5CB-4D35-9960-5FF2BD73EEB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B353C825-F5CB-4D35-9960-5FF2BD73EEB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B353C825-F5CB-4D35-9960-5FF2BD73EEB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C9D833B-18CF-4F1B-8732-03DCD356D6E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C9D833B-18CF-4F1B-8732-03DCD356D6E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C9D833B-18CF-4F1B-8732-03DCD356D6E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C9D833B-18CF-4F1B-8732-03DCD356D6E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E50AEF30-A67C-4751-9719-6678A1E19F2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E50AEF30-A67C-4751-9719-6678A1E19F2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E50AEF30-A67C-4751-9719-6678A1E19F2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E50AEF30-A67C-4751-9719-6678A1E19F2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F336B2DF-669E-41E6-AAA1-91BB20803B9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F336B2DF-669E-41E6-AAA1-91BB20803B9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F336B2DF-669E-41E6-AAA1-91BB20803B9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F336B2DF-669E-41E6-AAA1-91BB20803B9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5699F266-FBA1-4F39-8F46-E549ACE18F7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5699F266-FBA1-4F39-8F46-E549ACE18F7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5699F266-FBA1-4F39-8F46-E549ACE18F7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5699F266-FBA1-4F39-8F46-E549ACE18F7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69308DA6-8D6A-4159-A223-6923562937BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69308DA6-8D6A-4159-A223-6923562937BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69308DA6-8D6A-4159-A223-6923562937BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69308DA6-8D6A-4159-A223-6923562937BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

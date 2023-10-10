@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\git\\teste-gti\\WebMVC\\WebMVC.csproj",
-      "projectName": "WebMVC",
-      "projectPath": "C:\\git\\teste-gti\\WebMVC\\WebMVC.csproj",
+      "projectUniqueName": "C:\\git\\teste-gti\\WebMVC\\3 - WebMVC.csproj",
+      "projectName": "3 - WebMVC",
+      "projectPath": "C:\\git\\teste-gti\\WebMVC\\3 - WebMVC.csproj",
       "packagesPath": "C:\\Users\\cleyt\\.nuget\\packages\\",
       "outputPath": "C:\\git\\teste-gti\\WebMVC\\obj\\",
       "projectStyle": "PackageReference",

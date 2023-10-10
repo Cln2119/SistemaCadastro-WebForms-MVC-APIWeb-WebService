@@ -1,0 +1,12 @@
+C:\git\teste-gti\GTI.Services\bin\Debug\net6.0\GTI.Services.deps.json
+C:\git\teste-gti\GTI.Services\bin\Debug\net6.0\GTI.Services.dll
+C:\git\teste-gti\GTI.Services\bin\Debug\net6.0\GTI.Services.pdb
+C:\git\teste-gti\GTI.Services\obj\Debug\net6.0\GTI.Services.csproj.AssemblyReference.cache
+C:\git\teste-gti\GTI.Services\obj\Debug\net6.0\GTI.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\git\teste-gti\GTI.Services\obj\Debug\net6.0\GTI.Services.AssemblyInfoInputs.cache
+C:\git\teste-gti\GTI.Services\obj\Debug\net6.0\GTI.Services.AssemblyInfo.cs
+C:\git\teste-gti\GTI.Services\obj\Debug\net6.0\GTI.Services.csproj.CoreCompileInputs.cache
+C:\git\teste-gti\GTI.Services\obj\Debug\net6.0\GTI.Services.dll
+C:\git\teste-gti\GTI.Services\obj\Debug\net6.0\refint\GTI.Services.dll
+C:\git\teste-gti\GTI.Services\obj\Debug\net6.0\GTI.Services.pdb
+C:\git\teste-gti\GTI.Services\obj\Debug\net6.0\ref\GTI.Services.dll

@@ -1,0 +1,12 @@
+C:\git\teste-gti\GTI.Domain\bin\Debug\net6.0\GTI.Domain.deps.json
+C:\git\teste-gti\GTI.Domain\bin\Debug\net6.0\GTI.Domain.dll
+C:\git\teste-gti\GTI.Domain\bin\Debug\net6.0\GTI.Domain.pdb
+C:\git\teste-gti\GTI.Domain\obj\Debug\net6.0\GTI.Domain.csproj.AssemblyReference.cache
+C:\git\teste-gti\GTI.Domain\obj\Debug\net6.0\GTI.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\git\teste-gti\GTI.Domain\obj\Debug\net6.0\GTI.Domain.AssemblyInfoInputs.cache
+C:\git\teste-gti\GTI.Domain\obj\Debug\net6.0\GTI.Domain.AssemblyInfo.cs
+C:\git\teste-gti\GTI.Domain\obj\Debug\net6.0\GTI.Domain.csproj.CoreCompileInputs.cache
+C:\git\teste-gti\GTI.Domain\obj\Debug\net6.0\GTI.Domain.dll
+C:\git\teste-gti\GTI.Domain\obj\Debug\net6.0\refint\GTI.Domain.dll
+C:\git\teste-gti\GTI.Domain\obj\Debug\net6.0\GTI.Domain.pdb
+C:\git\teste-gti\GTI.Domain\obj\Debug\net6.0\ref\GTI.Domain.dll

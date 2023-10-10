@@ -1,0 +1,12 @@
+C:\git\teste-gti\GTI.CrossCutting\bin\Debug\net6.0\GTI.CrossCutting.deps.json
+C:\git\teste-gti\GTI.CrossCutting\bin\Debug\net6.0\GTI.CrossCutting.dll
+C:\git\teste-gti\GTI.CrossCutting\bin\Debug\net6.0\GTI.CrossCutting.pdb
+C:\git\teste-gti\GTI.CrossCutting\obj\Debug\net6.0\GTI.CrossCutting.csproj.AssemblyReference.cache
+C:\git\teste-gti\GTI.CrossCutting\obj\Debug\net6.0\GTI.CrossCutting.GeneratedMSBuildEditorConfig.editorconfig
+C:\git\teste-gti\GTI.CrossCutting\obj\Debug\net6.0\GTI.CrossCutting.AssemblyInfoInputs.cache
+C:\git\teste-gti\GTI.CrossCutting\obj\Debug\net6.0\GTI.CrossCutting.AssemblyInfo.cs
+C:\git\teste-gti\GTI.CrossCutting\obj\Debug\net6.0\GTI.CrossCutting.csproj.CoreCompileInputs.cache
+C:\git\teste-gti\GTI.CrossCutting\obj\Debug\net6.0\GTI.CrossCutting.dll
+C:\git\teste-gti\GTI.CrossCutting\obj\Debug\net6.0\refint\GTI.CrossCutting.dll
+C:\git\teste-gti\GTI.CrossCutting\obj\Debug\net6.0\GTI.CrossCutting.pdb
+C:\git\teste-gti\GTI.CrossCutting\obj\Debug\net6.0\ref\GTI.CrossCutting.dll
