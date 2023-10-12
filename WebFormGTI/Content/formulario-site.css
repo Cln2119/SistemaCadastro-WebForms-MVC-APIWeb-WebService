@@ -1,0 +1,88 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+root {
+    --color-neural-0: #000000;
+    --color-neural-1: #ADFF2F;
+}
+
+body {
+    margin-top: 15px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+hr {   
+    opacity: 0.1; 
+}
+
+.hr-margin-top{
+    margin-top: 25px;
+}
+
+input {
+    margin-top: 5px;
+    border-radius: 1px;
+}
+
+    input::placeholder, textarea::placeholder {
+        color: #DCDCDC;
+    }
+
+label {
+    margin-top: 5px;
+    color: #323233;
+    font-size: 14px;
+    font-weight: 600;    
+}
+
+button {    
+    position:absolute;
+    left: 72.5%;
+    margin-bottom: 15px;
+}
+.btn-sucesso {
+    background-color: #ADFF2F;
+    border-color: #ADFF2F;
+    margin: 12px -4px 9px 7px;
+    width: 19%;
+    border-radius: 3px;
+    padding: 12px;
+}
+    .btn-sucesso:hover {
+        background-color: #32CD32;
+    }
+
+.margin-btn{
+    margin-top: 1px;
+}
+
+h5 {
+    color: #3538fc
+}
+
+.div-margin{
+    padding-right: 0px;
+}
+
+.h5-margin{
+    margin-top: 15px;
+}
+
+.search-container {
+    display: flex;
+}
+
+.search-input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.search-button {
+    background-color: blue;
+    border: none;
+    color: white;
+    border-radius: 0 5px 5px 0;
+}
+
+
