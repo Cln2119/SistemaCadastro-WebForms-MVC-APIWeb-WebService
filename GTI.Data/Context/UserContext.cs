@@ -16,12 +16,14 @@ namespace GTI.Data.Context
         {
         }
 
-        public DbSet<UserEntity> Usuarios { get; set; }
+        public DbSet<ClienteEntity> Cliente { get; set; }
+        public DbSet<ClienteEntity> Endereco_Cliente { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<UserEntity>(new UserMap().Configure);
+            modelBuilder.Entity<ClienteEntity>(new ClienteMap().Configure);
+            modelBuilder.Entity<EnderecoClienteEntity>(new EnderecoMap().Configure);
         }
     }
 }

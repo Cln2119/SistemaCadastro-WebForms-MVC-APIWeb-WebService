@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace GTI.Services.Services
 {
-    public class UserService : IUserService
+    public class ClienteService : IClienteService
     {
-        private IRepository<UserEntity> _repository;   
+        private IRepository<ClienteEntity> _repository;   
 
-        public UserService(IRepository<UserEntity> repository)
+        public ClienteService(IRepository<ClienteEntity> repository)
         {
             _repository = repository;           
         }
@@ -22,22 +22,22 @@ namespace GTI.Services.Services
             return await _repository.DeleteAsync(id);
         }
 
-        public async Task<UserEntity> Get(int id)
+        public async Task<ClienteEntity> Get(int id)
         {
             return await _repository.SelectAsync(id);
         }
 
-        public async Task<IEnumerable<UserEntity>> GetAll()
+        public async Task<IEnumerable<ClienteEntity>> GetAll()
         {
             return await _repository.SelectAsync();
         }    
 
-        public async Task<UserEntity> Post(UserEntity user)
+        public async Task<ClienteEntity> Post(ClienteEntity user)
         {
             return await _repository.InsertAsync(user);
         }
 
-        public async Task<UserEntity> Put(UserEntity user)
+        public async Task<ClienteEntity> Put(ClienteEntity user)
         {
             return await _repository.UpdateAsync(user);
         }

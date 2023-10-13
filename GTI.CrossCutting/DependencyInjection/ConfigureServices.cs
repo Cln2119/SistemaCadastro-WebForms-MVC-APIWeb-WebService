@@ -10,7 +10,8 @@ namespace GTI.CrossCutting.DependencyInjection
     {
         public static void ConfigureDependenciesService(IServiceCollection serviceCollection)
         {
-            serviceCollection.AddTransient<IUserService, UserService>();           
+            serviceCollection.AddTransient<IClienteService, ClienteService>();
+            serviceCollection.AddTransient<IEnderecoServices, EnderecoServices>();
         }
     }
 }

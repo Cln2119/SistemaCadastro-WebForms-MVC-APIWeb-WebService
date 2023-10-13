@@ -8,10 +8,13 @@ namespace WebAPI.Controllers
     [Route("[controller]")]
     public class UsersController : ControllerBase
     {
-        public IUserService _service { get; set; }
-        public UsersController(IUserService service)
+        public IClienteService _service { get; set; }
+        public IEnderecoServices _enderecoService { get; set; }
+
+        public UsersController(IClienteService service, IEnderecoServices enderecoServices)
         {
             _service = service;
+            _enderecoService = enderecoServices;
         }
 
         /// <summary>
@@ -41,9 +44,41 @@ namespace WebAPI.Controllers
         {
             try
             {
-                var user = await _service.GetAll();
+                var cliente = await _service.GetAll();
+                var enderecoCliente = await _enderecoService.GetAll();
 
-                return Ok(user);
+                var consulta = from t1 in cliente
+                               join t2 in enderecoCliente
+                               on t1.Id equals t2.Id_Cliente
+                               select new DadosClienteCompleto
+                               {
+                                   Id = t1.Id,
+                                   CPF = t1.CPF,
+                                   Nome = t1.Nome,
+                                   RG = t1.RG,
+                                   Data_Expedicao = t1.Data_Expedicao,
+                                   Orgao_Expedicao = t1.Orgao_Expedicao,
+                                   UF = t1.UF,
+                                   DataNascimento = t1.DataNascimento,
+                                   Sexo = t1.Sexo,
+                                   Estado_Civil = t1.Estado_Civil,
+                                   Endereco = new DadosEndereco
+                                   {
+                                       Id = t2.Id,
+                                       CEP = t2.CEP,
+                                       Logradouro = t2.Logradouro,
+                                       Numero = t2.Numero,
+                                       Complemento = t2.Complemento,
+                                       Cidade = t2.Cidade,
+                                       Bairro = t2.Bairro,
+                                       UF = t2.UF,
+                                       Id_Cliente = t2.Id_Cliente,
+                                   }
+                               };
+
+                var resultado = consulta.ToList();
+
+                return Ok(resultado);
             }
             catch (Exception ex)
             {
@@ -80,7 +115,7 @@ namespace WebAPI.Controllers
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> Post(UserEntity user)
+        public async Task<IActionResult> Post(ClienteEntity user)
         {
             try
             {
@@ -194,7 +229,7 @@ namespace WebAPI.Controllers
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> Put(UserEntity user)
+        public async Task<IActionResult> Put(ClienteEntity user)
         {
             try
             {

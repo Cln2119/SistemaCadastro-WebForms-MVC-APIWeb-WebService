@@ -1,4 +1,6 @@
 using GTI.CrossCutting.DependencyInjection;
+using GTI.Data.Context;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 ConfigurationManager configuration = builder.Configuration;
@@ -9,6 +11,9 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddDbContext<UserContext>(options =>
+    options.UseSqlServer(configuration.GetSection("DBConnection").Value));
 
 var app = builder.Build();
 

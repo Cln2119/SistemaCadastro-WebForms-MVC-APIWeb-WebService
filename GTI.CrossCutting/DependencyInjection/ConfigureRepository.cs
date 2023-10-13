@@ -10,7 +10,7 @@ namespace GTI.CrossCutting.DependencyInjection
     {
         public static void ConfigureDependenciesRepository(IServiceCollection serviceCollection)
         {
-            string connectionString = "Data Source=LAPTOP-1P8P1N60\\SQLEXPRESS;Initial Catalog=Users;Integrated Security=True;";
+            string connectionString = "Data Source=LAPTOP-1P8P1N60\\SQLEXPRESS;Initial Catalog=Clientes;Integrated Security=True;";
             serviceCollection.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));
             serviceCollection.AddDbContext<UserContext>(
                 options => options.UseSqlServer(connectionString)

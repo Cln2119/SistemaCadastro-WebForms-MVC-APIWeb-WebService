@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace GTI.Domain.Interfaces.Services
 {
-    public interface IUserService
+    public interface IClienteService
     {
-        Task<UserEntity> Get(int id);   
-        Task<IEnumerable<UserEntity>> GetAll();  
-        Task<UserEntity> Post(UserEntity user);
-        Task<UserEntity> Put(UserEntity user);
+        Task<ClienteEntity> Get(int id);   
+        Task<IEnumerable<ClienteEntity>> GetAll();  
+        Task<ClienteEntity> Post(ClienteEntity user);
+        Task<ClienteEntity> Put(ClienteEntity user);
         Task<bool> Delete(int id);    
     }
 }
