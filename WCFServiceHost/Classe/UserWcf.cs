@@ -6,20 +6,29 @@ using System.Web;
 namespace WCFServiceHost.Classe
 {
     public class UserWcf
-    {
-        public Mensagem Status { get; set; }
-        public int Id { get; set; }
+    {        
+        public int? Id { get; set; }
+        public string CPF { get; set; }
         public string Nome { get; set; }
-        public string Email { get; set; }
-        public string CpfCnpj { get; set; }
-        public string CreateAt { get; set; }
-        public string UpdateAt { get; set; }        
-
+        public string RG { get; set; }
+        public DateTime Data_Expedicao { get; set; }
+        public string Orgao_Expedicao { get; set; }
+        public string UF { get; set; }
+        public DateTime DataNascimento { get; set; }
+        public string Sexo { get; set; }
+        public string Estado_Civil { get; set; }
+        public Endereco Endereco_Cliente { get; set; }
     }
 
-    public class Mensagem
+    public class Endereco
     {
-        public bool Status { get; set; }
-        public string MoreInformation { get; set; }
-    }
+        public string CEP { get; set; }
+        public string Logradouro { get; set; }
+        public string Numero { get; set; }
+        public string Complemento { get; set; }     
+        public string Cidade { get; set; }
+        public string Bairro { get; set; }
+        public string UF { get; set; }
+        public int Id_Cliente { get; set; }
+    }   
 }

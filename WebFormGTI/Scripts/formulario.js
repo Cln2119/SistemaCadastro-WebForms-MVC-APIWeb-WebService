@@ -1,12 +1,10 @@
-﻿function openModal(btn) {
-    debugger
+﻿function atualizarCliente(btn) {   
     var row = btn.parentNode.parentNode;
     var cells = row.getElementsByTagName("td");
     document.getElementById("editItemID").value = cells[0].innerText;
     document.getElementById("modalName").value = cells[1].innerText;
     document.getElementById("modalEmail").value = cells[2].innerText;
-    document.getElementById("modalCPFCNPJ").value = cells[3].innerText;
-    document.getElementById("myModal").style.display = "block";
+    document.getElementById("modalCPFCNPJ").value = cells[3].innerText;   
 }
 
 function formatarCPF(input) {
@@ -71,7 +69,7 @@ function exibirMensagem(mensagem) {
 //Validar dataNascimento
 
 function validarDataNascimento() {
-    const dataNascimentoInput = document.getElementById("dataNascimento");
+    const dataNascimentoInput = document.getElementById("<%= txtDataNascimento.ClientID %>");
     const mensagemErro = document.getElementById("mensagemErro");
 
     const dataNascimento = new Date(dataNascimentoInput.value);

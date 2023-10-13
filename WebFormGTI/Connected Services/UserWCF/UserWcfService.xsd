@@ -8,21 +8,31 @@
   <xs:element name="ArrayOfUserWcf" nillable="true" type="tns:ArrayOfUserWcf" />
   <xs:complexType name="UserWcf">
     <xs:sequence>
-      <xs:element minOccurs="0" name="CpfCnpj" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="CreateAt" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="CPF" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DataNascimento" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Data_Expedicao" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Endereco_Cliente" nillable="true" type="tns:Endereco" />
+      <xs:element minOccurs="0" name="Estado_Civil" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
       <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Status" nillable="true" type="tns:Mensagem" />
-      <xs:element minOccurs="0" name="UpdateAt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Orgao_Expedicao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RG" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sexo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UF" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="UserWcf" nillable="true" type="tns:UserWcf" />
-  <xs:complexType name="Mensagem">
+  <xs:complexType name="Endereco">
     <xs:sequence>
-      <xs:element minOccurs="0" name="MoreInformation" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Status" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Bairro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CEP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cidade" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Complemento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_Cliente" type="xs:int" />
+      <xs:element minOccurs="0" name="Logradouro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Numero" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UF" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="Mensagem" nillable="true" type="tns:Mensagem" />
+  <xs:element name="Endereco" nillable="true" type="tns:Endereco" />
 </xs:schema>

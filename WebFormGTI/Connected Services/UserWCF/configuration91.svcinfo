@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="dWonsD+Q4WiNBlgGSGcCudgHIN+cWK1ILVx70xDNSdo=">
+<SavedWcfConfigurationInformation xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="9.1" CheckSum="FV+gL5YIm5U+OJ1Kc36BVsjnMJqWsW7XRreZqJzMtI0=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_IUserWcfService">
       <properties>

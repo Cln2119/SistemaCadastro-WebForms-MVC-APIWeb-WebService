@@ -35,7 +35,7 @@ label {
     font-weight: 600;    
 }
 
-button {    
+.button {    
     position:absolute;
     left: 72.5%;
     margin-bottom: 15px;
@@ -54,6 +54,7 @@ button {
 
 .margin-btn{
     margin-top: 1px;
+    margin-bottom: 75px;
 }
 
 h5 {
@@ -66,10 +67,21 @@ h5 {
 
 .h5-margin{
     margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .ajuste-select{
     margin-top: 5px;
+}
+
+.mensagem-erro{
+    margin-top: 5px;
+    font-size: 13px;
+    color: red;
+}
+
+.margin-gridview{
+    margin-top: 20px;
 }
 
 

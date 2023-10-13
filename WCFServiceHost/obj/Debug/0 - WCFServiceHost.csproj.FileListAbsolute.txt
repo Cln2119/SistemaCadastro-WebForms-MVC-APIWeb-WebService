@@ -1,0 +1,7 @@
+C:\git\teste-gti\WCFServiceHost\obj\Debug\0 - WCFServiceHost.csproj.AssemblyReference.cache
+C:\git\teste-gti\WCFServiceHost\obj\Debug\0 - WCFServiceHost.csproj.CoreCompileInputs.cache
+C:\git\teste-gti\WCFServiceHost\obj\Debug\WCFServiceHost.dll
+C:\git\teste-gti\WCFServiceHost\obj\Debug\WCFServiceHost.pdb
+C:\git\teste-gti\WCFServiceHost\bin\WCFServiceHost.dll.config
+C:\git\teste-gti\WCFServiceHost\bin\WCFServiceHost.dll
+C:\git\teste-gti\WCFServiceHost\bin\WCFServiceHost.pdb

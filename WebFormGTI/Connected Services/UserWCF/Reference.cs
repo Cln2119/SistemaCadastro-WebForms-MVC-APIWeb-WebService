@@ -23,25 +23,37 @@ namespace WebFormGTI.UserWCF {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CpfCnpjField;
+        private string CPFField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CreateAtField;
+        private System.DateTime DataNascimentoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EmailField;
+        private System.DateTime Data_ExpedicaoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
+        private WebFormGTI.UserWCF.Endereco Endereco_ClienteField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Estado_CivilField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string NomeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WebFormGTI.UserWCF.Mensagem StatusField;
+        private string Orgao_ExpedicaoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string UpdateAtField;
+        private string RGField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SexoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UFField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -54,46 +66,72 @@ namespace WebFormGTI.UserWCF {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CpfCnpj {
+        public string CPF {
             get {
-                return this.CpfCnpjField;
+                return this.CPFField;
             }
             set {
-                if ((object.ReferenceEquals(this.CpfCnpjField, value) != true)) {
-                    this.CpfCnpjField = value;
-                    this.RaisePropertyChanged("CpfCnpj");
+                if ((object.ReferenceEquals(this.CPFField, value) != true)) {
+                    this.CPFField = value;
+                    this.RaisePropertyChanged("CPF");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CreateAt {
+        public System.DateTime DataNascimento {
             get {
-                return this.CreateAtField;
+                return this.DataNascimentoField;
             }
             set {
-                if ((object.ReferenceEquals(this.CreateAtField, value) != true)) {
-                    this.CreateAtField = value;
-                    this.RaisePropertyChanged("CreateAt");
+                if ((this.DataNascimentoField.Equals(value) != true)) {
+                    this.DataNascimentoField = value;
+                    this.RaisePropertyChanged("DataNascimento");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Email {
+        public System.DateTime Data_Expedicao {
             get {
-                return this.EmailField;
+                return this.Data_ExpedicaoField;
             }
             set {
-                if ((object.ReferenceEquals(this.EmailField, value) != true)) {
-                    this.EmailField = value;
-                    this.RaisePropertyChanged("Email");
+                if ((this.Data_ExpedicaoField.Equals(value) != true)) {
+                    this.Data_ExpedicaoField = value;
+                    this.RaisePropertyChanged("Data_Expedicao");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
+        public WebFormGTI.UserWCF.Endereco Endereco_Cliente {
+            get {
+                return this.Endereco_ClienteField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Endereco_ClienteField, value) != true)) {
+                    this.Endereco_ClienteField = value;
+                    this.RaisePropertyChanged("Endereco_Cliente");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Estado_Civil {
+            get {
+                return this.Estado_CivilField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Estado_CivilField, value) != true)) {
+                    this.Estado_CivilField = value;
+                    this.RaisePropertyChanged("Estado_Civil");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> Id {
             get {
                 return this.IdField;
             }
@@ -119,27 +157,53 @@ namespace WebFormGTI.UserWCF {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WebFormGTI.UserWCF.Mensagem Status {
+        public string Orgao_Expedicao {
             get {
-                return this.StatusField;
+                return this.Orgao_ExpedicaoField;
             }
             set {
-                if ((object.ReferenceEquals(this.StatusField, value) != true)) {
-                    this.StatusField = value;
-                    this.RaisePropertyChanged("Status");
+                if ((object.ReferenceEquals(this.Orgao_ExpedicaoField, value) != true)) {
+                    this.Orgao_ExpedicaoField = value;
+                    this.RaisePropertyChanged("Orgao_Expedicao");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string UpdateAt {
+        public string RG {
             get {
-                return this.UpdateAtField;
+                return this.RGField;
             }
             set {
-                if ((object.ReferenceEquals(this.UpdateAtField, value) != true)) {
-                    this.UpdateAtField = value;
-                    this.RaisePropertyChanged("UpdateAt");
+                if ((object.ReferenceEquals(this.RGField, value) != true)) {
+                    this.RGField = value;
+                    this.RaisePropertyChanged("RG");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Sexo {
+            get {
+                return this.SexoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SexoField, value) != true)) {
+                    this.SexoField = value;
+                    this.RaisePropertyChanged("Sexo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UF {
+            get {
+                return this.UFField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UFField, value) != true)) {
+                    this.UFField = value;
+                    this.RaisePropertyChanged("UF");
                 }
             }
         }
@@ -156,18 +220,36 @@ namespace WebFormGTI.UserWCF {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Mensagem", Namespace="http://schemas.datacontract.org/2004/07/WCFServiceHost.Classe")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Endereco", Namespace="http://schemas.datacontract.org/2004/07/WCFServiceHost.Classe")]
     [System.SerializableAttribute()]
-    public partial class Mensagem : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class Endereco : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string MoreInformationField;
+        private string BairroField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool StatusField;
+        private string CEPField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CidadeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ComplementoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int Id_ClienteField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LogradouroField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NumeroField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UFField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -180,27 +262,105 @@ namespace WebFormGTI.UserWCF {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string MoreInformation {
+        public string Bairro {
             get {
-                return this.MoreInformationField;
+                return this.BairroField;
             }
             set {
-                if ((object.ReferenceEquals(this.MoreInformationField, value) != true)) {
-                    this.MoreInformationField = value;
-                    this.RaisePropertyChanged("MoreInformation");
+                if ((object.ReferenceEquals(this.BairroField, value) != true)) {
+                    this.BairroField = value;
+                    this.RaisePropertyChanged("Bairro");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Status {
+        public string CEP {
             get {
-                return this.StatusField;
+                return this.CEPField;
             }
             set {
-                if ((this.StatusField.Equals(value) != true)) {
-                    this.StatusField = value;
-                    this.RaisePropertyChanged("Status");
+                if ((object.ReferenceEquals(this.CEPField, value) != true)) {
+                    this.CEPField = value;
+                    this.RaisePropertyChanged("CEP");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Cidade {
+            get {
+                return this.CidadeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CidadeField, value) != true)) {
+                    this.CidadeField = value;
+                    this.RaisePropertyChanged("Cidade");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Complemento {
+            get {
+                return this.ComplementoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ComplementoField, value) != true)) {
+                    this.ComplementoField = value;
+                    this.RaisePropertyChanged("Complemento");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id_Cliente {
+            get {
+                return this.Id_ClienteField;
+            }
+            set {
+                if ((this.Id_ClienteField.Equals(value) != true)) {
+                    this.Id_ClienteField = value;
+                    this.RaisePropertyChanged("Id_Cliente");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Logradouro {
+            get {
+                return this.LogradouroField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LogradouroField, value) != true)) {
+                    this.LogradouroField = value;
+                    this.RaisePropertyChanged("Logradouro");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Numero {
+            get {
+                return this.NumeroField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NumeroField, value) != true)) {
+                    this.NumeroField = value;
+                    this.RaisePropertyChanged("Numero");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UF {
+            get {
+                return this.UFField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UFField, value) != true)) {
+                    this.UFField = value;
+                    this.RaisePropertyChanged("UF");
                 }
             }
         }
