@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 namespace GTI.Domain.Entity
 {
     public class BaseEntity
-    {       
+    {
+        [Key]
         public int Id { get; set; }       
     }
 }

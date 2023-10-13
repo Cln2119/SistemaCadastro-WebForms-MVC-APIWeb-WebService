@@ -15,7 +15,10 @@ namespace GTI.Data.Mapping
         {
             builder.ToTable("Endereco_Cliente");
 
-            builder.HasKey(u => u.Id_Cliente);
+            builder.HasKey(u => u.Id);
+
+            builder.Property(e => e.Id)
+            .UseIdentityColumn();
 
             builder.Property(e => e.Logradouro)
                .HasColumnName("Logradouro");

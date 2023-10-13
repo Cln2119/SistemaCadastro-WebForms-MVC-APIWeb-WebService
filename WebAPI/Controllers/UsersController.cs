@@ -115,12 +115,40 @@ namespace WebAPI.Controllers
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> Post(ClienteEntity user)
+        public async Task<IActionResult> Post(DadosClienteCompleto user)
         {
             try
             {
-                var result = await _service.Post(user);
-                return Ok(result);
+                var cliente = new ClienteEntity
+                {
+                    CPF = user.CPF,
+                    Nome = user.Nome,
+                    RG = user.RG,
+                    Data_Expedicao = user.Data_Expedicao,
+                    Orgao_Expedicao = user.Orgao_Expedicao,
+                    UF = user.UF,
+                    DataNascimento = user.DataNascimento,
+                    Sexo = user.Sexo,
+                    Estado_Civil = user.Estado_Civil,
+                };
+
+                var result = await _service.Post(cliente);
+
+                var enderencoCliente = new EnderecoClienteEntity
+                {
+                    CEP = user.Endereco.CEP,
+                    Logradouro = user.Endereco.Logradouro,
+                    Numero = user.Endereco.Numero,
+                    Complemento = user.Endereco.Complemento,
+                    Cidade = user.Endereco.Cidade,
+                    Bairro = user.Endereco.Bairro,
+                    UF = user.Endereco.UF,
+                    Id_Cliente = result.Id
+                };
+
+                var resultEndereco = await _enderecoService.Post(enderencoCliente);
+                
+                return Ok(resultEndereco);
             }
             catch (Exception ex)
             {
@@ -156,8 +184,36 @@ namespace WebAPI.Controllers
         {
             try
             {
-                var result = await _service.Get(id);
-                return Ok(result);
+                var cliente = await _service.Get(id);
+                var enderecoCliente = await _enderecoService.Get(id);
+
+                var consulta = new DadosClienteCompleto
+                                {
+                                    Id = cliente.Id,
+                                    CPF = cliente.CPF,
+                                    Nome = cliente.Nome,
+                                    RG = cliente.RG,
+                                    Data_Expedicao = cliente.Data_Expedicao,
+                                    Orgao_Expedicao = cliente.Orgao_Expedicao,
+                                    UF = cliente.UF,
+                                    DataNascimento = cliente.DataNascimento,
+                                    Sexo = cliente.Sexo,
+                                    Estado_Civil = cliente.Estado_Civil,
+                                    Endereco = new DadosEndereco
+                                    {
+                                        Id = enderecoCliente.Id,
+                                        CEP = enderecoCliente.CEP,
+                                        Logradouro = enderecoCliente.Logradouro,
+                                        Numero = enderecoCliente.Numero,
+                                        Complemento = enderecoCliente.Complemento,
+                                        Cidade = enderecoCliente.Cidade,
+                                        Bairro = enderecoCliente.Bairro,
+                                        UF = enderecoCliente.UF,
+                                        Id_Cliente = enderecoCliente.Id_Cliente,
+                                    }
+                                };
+
+                return Ok(consulta);
             }
             catch (Exception ex)
             {
@@ -192,7 +248,14 @@ namespace WebAPI.Controllers
         {
             try
             {
+                var resultClientes = await _enderecoService.GetAll();
+
+                var filtroCliente = resultClientes.FirstOrDefault(cliente => cliente.Id_Cliente == id);
+
+                var resultDelete = await _enderecoService.Delete(filtroCliente.Id);
+                
                 var result = await _service.Delete(id);
+
                 return Ok(result);
             }
             catch (Exception ex)
@@ -229,12 +292,46 @@ namespace WebAPI.Controllers
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> Put(ClienteEntity user)
+        public async Task<IActionResult> Put(DadosClienteCompleto user)
         {
             try
             {
-                var result = await _service.Put(user);
-                return Ok(result);
+                var dadosCliente = new ClienteEntity
+                {
+                    Id = user.Id,
+                    CPF = user.CPF,
+                    Nome = user.Nome,
+                    RG = user.RG,
+                    Data_Expedicao = user.Data_Expedicao,
+                    Orgao_Expedicao = user.Orgao_Expedicao,
+                    UF = user.UF,
+                    DataNascimento = user.DataNascimento,
+                    Sexo = user.Sexo,
+                    Estado_Civil = user.Estado_Civil,
+                };
+
+                var resultCliente = await _service.Put(dadosCliente);
+
+                var result = await _enderecoService.GetAll();
+
+                var clienteEnderecoId = result.FirstOrDefault(cliente => cliente.Id_Cliente == user.Id);
+
+                var dadosEndereco = new EnderecoClienteEntity
+                {
+                    Id = clienteEnderecoId.Id,
+                    CEP = user.Endereco.CEP,
+                    Logradouro = user.Endereco.Logradouro,
+                    Numero = user.Endereco.Numero,
+                    Complemento = user.Endereco.Complemento,
+                    Cidade = user.Endereco.Cidade,
+                    Bairro = user.Endereco.Bairro,
+                    UF = user.Endereco.UF,
+                    Id_Cliente = clienteEnderecoId.Id,
+                };
+
+                var resultEndereco = await _enderecoService.Put(dadosEndereco);
+
+                return Ok(dadosCliente);
             }
             catch (Exception ex)
             {
