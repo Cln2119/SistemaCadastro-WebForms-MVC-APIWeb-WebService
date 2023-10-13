@@ -9,6 +9,6 @@ namespace WebMVC.Domain.Interfaces.Services
         Task<string> CreateUserAsync(UserFrontRequest user);
         Task<string> GetAllUserAsync();
         Task<string> DeleteUserAsync(UserFront user);
-        Task<string> PutUserAsync(UserFrontRequest user);
+        Task<string> PutUserAsync(UserFrontAtualizacaoRequest user);
     }
 }

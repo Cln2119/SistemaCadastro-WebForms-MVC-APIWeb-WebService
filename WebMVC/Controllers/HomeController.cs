@@ -39,7 +39,7 @@ namespace WebMVC.Controllers
             }
            
         }
-        public async Task<IActionResult> PostUser(
+        public async Task<IActionResult> PostUser(           
             string cpf, 
             string nome, 
             string rg,
@@ -57,41 +57,50 @@ namespace WebMVC.Controllers
             string cidade,
             string ufEstado
             )
-        {           
-            string cpfFormatado = cpf.Replace(".", "").Replace("-", "");
-            var userRequest = new UserFrontRequest
+        {
+            int? userId = HttpContext.Session.GetInt32("UserID");
+            if (userId == null)
             {
-                Nome = nome,
-                CPF = cpfFormatado,
-                RG = rg,
-                Data_Expedicao = DateTime.Parse(dataExpedicao),
-                Orgao_Expedicao = orgaoExpedicao,
-                UF = orgaoUf,
-                DataNascimento = DateTime.Parse(dataNascimento),
-                Sexo = sexo,
-                Estado_Civil = estadoCivil,
+                string cpfFormatado = cpf.Replace(".", "").Replace("-", "");
+                var userRequest = new UserFrontRequest
+                {
+                    Nome = nome,
+                    CPF = cpfFormatado,
+                    RG = rg,
+                    Data_Expedicao = DateTime.Parse(dataExpedicao),
+                    Orgao_Expedicao = orgaoExpedicao,
+                    UF = orgaoUf,
+                    DataNascimento = DateTime.Parse(dataNascimento),
+                    Sexo = sexo,
+                    Estado_Civil = estadoCivil,
                     Endereco = new DadosEnderecoRequest
                     {
                         CEP = cep,
                         Logradouro = logradouro,
                         Numero = numero,
-                        Complemento= complemento,
+                        Complemento = complemento,
                         Bairro = bairro,
                         Cidade = cidade,
                         UF = ufEstado
                     }
 
-            };
+                };
 
-            var result = await _userService.CreateUserAsync(userRequest);
+                var result = await _userService.CreateUserAsync(userRequest);
 
-            if (result == null)
-                return BadRequest(result);
-            
-            return RedirectToAction("Index", "Home");
+                if (result == null)
+                    return BadRequest(result);
+
+                return RedirectToAction("Index", "Home");
+            }
+            else
+            {
+                return Ok();
+            }
+           
         }
         public async Task<IActionResult> DeleteUser(UserFront userId)
-        {
+        {            
             
             var result = await _userService.DeleteUserAsync(userId);
 
@@ -102,36 +111,101 @@ namespace WebMVC.Controllers
         }
         public async Task<ActionResult> EditarUsuario(string id)
         {
-            
-            var response = await _userService.GetAllUserAsync();
-            var listUsers = JsonConvert.DeserializeObject<List<UserFront>>(response);
+            HttpContext.Session.SetInt32("UserID", int.Parse(id));
 
-            var user = listUsers.FirstOrDefault(user => user.Id == int.Parse(id));
+            var response = await _userService.GetAllUserAsync();
+            var cliente = JsonConvert.DeserializeObject<List<UserFront>>(response);
+
+            var filtroCliente = cliente.FirstOrDefault(x => x.Id == int.Parse(id));
+            var formatarDataExpedicao = DateTime.Parse(filtroCliente.Data_Expedicao);
+            var formatarDataNascimento = DateTime.Parse(filtroCliente.DataNascimento);
 
             var userFront = new UserFront
             {
-                Nome = user.Nome,
-               // Email = user.Email,
-                Id = user.Id,
-                //CpfCnpj = user.CpfCnpj
-            };   
+               Id = filtroCliente.Id,
+                CPF = filtroCliente.CPF,
+                Nome = filtroCliente.Nome,
+                RG = filtroCliente.RG,
+                Data_Expedicao = formatarDataExpedicao.ToString("yyyy-MM-dd"),
+                Orgao_Expedicao = filtroCliente.Orgao_Expedicao,
+                UF = filtroCliente.UF,
+                DataNascimento = formatarDataNascimento.ToString("yyyy-MM-dd"),
+                Sexo = filtroCliente.Sexo,
+                Estado_Civil = filtroCliente.Estado_Civil,
+                Endereco = new DadosEndereco
+                    {
+                        Id = filtroCliente.Endereco.Id,
+                    CEP = filtroCliente.Endereco.CEP,
+                    Logradouro = filtroCliente.Endereco.Logradouro,
+                    Numero = filtroCliente.Endereco.Numero,
+                    Complemento = filtroCliente.Endereco.Complemento,
+                    Cidade = filtroCliente.Endereco.Cidade,
+                    Bairro = filtroCliente.Endereco.Bairro,
+                    UF = filtroCliente.Endereco.UF,
+                    Id_Cliente = filtroCliente.Endereco.Id_Cliente,
+                }
+            };
 
             return PartialView("~/Views/Home/EditarPessoa.cshtml", userFront);
         }
-        public async Task<IActionResult> SalvarEdicaoUsuario(string nome, string email, string id, string cpfCnpj)
+        public async Task<IActionResult> SalvarEdicaoUsuario(
+            string id,
+            string cpf,
+            string nome,
+            string rg,
+            string dataExpedicao,
+            string orgaoExpedicao,
+            string orgaoUf,
+            string dataNascimento,
+            string sexo,
+            string estadoCivil,
+            string cep,
+            string logradouro,
+            string numero,
+            string complemento,
+            string bairro,
+            string cidade,
+            string ufEstado)
         {
-            var userRequest = new UserFrontRequest
-            {
-                //id = int.Parse(id),
-               //nome = nome,
-                //email = email,
-               // cpfCnpj = cpfCnpj,               
-               // updateAt = DateTime.UtcNow,
-            };
-            var response = await _userService.PutUserAsync(userRequest);
+            string cpfFormatado = cpf.Replace(".", "").Replace("-", "");
 
-            if(response == null)
-                return BadRequest(response);
+            var response = await _userService.GetAllUserAsync();
+
+            var listUsers = JsonConvert.DeserializeObject<List<UserFront>>(response);
+
+            var clienteId = listUsers.FirstOrDefault(x => x.Endereco.Id_Cliente == int.Parse(id)); 
+
+            var userRequest = new UserFrontAtualizacaoRequest
+            {        
+                Id = int.Parse(id),
+                Nome = nome,
+                CPF = cpfFormatado,
+                RG = rg,
+                Data_Expedicao = DateTime.Parse(dataExpedicao),
+                Orgao_Expedicao = orgaoExpedicao,
+                UF = orgaoUf,
+                DataNascimento = DateTime.Parse(dataNascimento),
+                Sexo = sexo,
+                Estado_Civil = estadoCivil,
+                Endereco = new DadosAtualizaEnderecoRequest
+                {
+                    Id = clienteId.Endereco.Id,
+                    CEP = cep,
+                    Logradouro = logradouro,
+                    Numero = numero,
+                    Complemento = complemento,
+                    Bairro = bairro,
+                    Cidade = cidade,
+                    UF = ufEstado,
+                    id_cliente = clienteId.Endereco.Id.ToString()
+                }
+
+            };
+
+            var result = await _userService.PutUserAsync(userRequest);
+
+            if(result == null)
+                return BadRequest(result);
 
             return RedirectToAction("Index", "Home");
         }

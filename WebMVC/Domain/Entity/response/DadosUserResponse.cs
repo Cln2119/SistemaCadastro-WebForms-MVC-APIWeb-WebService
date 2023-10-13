@@ -1,21 +1,20 @@
-﻿namespace WebMVC.Models
+﻿namespace WebMVC.Domain.Entity.response
 {
-    public class UserFront
+    public class DadosUserResponse
     {
         public int Id { get; set; }
         public string CPF { get; set; }
         public string Nome { get; set; }
         public string RG { get; set; }
-        public string Data_Expedicao { get; set; }
+        public DateTime Data_Expedicao { get; set; }
         public string Orgao_Expedicao { get; set; }
         public string UF { get; set; }
-        public string DataNascimento { get; set; }
+        public DateTime DataNascimento { get; set; }
         public string Sexo { get; set; }
         public string Estado_Civil { get; set; }
-        public DadosEndereco Endereco { get; set; }
+        public DadosEnderecoResponse Endereco { get; set; }
     }
-
-    public class DadosEndereco
+    public class DadosEnderecoResponse
     {
         public int Id { get; set; }
         public string CEP { get; set; }

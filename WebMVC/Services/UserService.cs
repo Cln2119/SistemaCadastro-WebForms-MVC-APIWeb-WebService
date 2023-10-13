@@ -76,7 +76,7 @@ namespace WebMVC.Services
             }
 
         }
-        public async Task<string> PutUserAsync(UserFrontRequest user)
+        public async Task<string> PutUserAsync(UserFrontAtualizacaoRequest user)
         {
             string retornoErroStatusCode = string.Empty;
             string retornoErroPhrase = string.Empty;
