@@ -9,14 +9,12 @@ namespace WebMVC.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-        private readonly IUserFront _userFront;
+        private readonly ILogger<HomeController> _logger; 
         private readonly IUserService _userService;
 
-        public HomeController(ILogger<HomeController> logger, IUserFront userFront, IUserService userService)
+        public HomeController(ILogger<HomeController> logger, IUserService userService)
         {
-            _logger = logger;
-            _userFront = userFront;
+            _logger = logger;         
             _userService = userService;
         }
 
@@ -41,15 +39,48 @@ namespace WebMVC.Controllers
             }
            
         }
-        public async Task<IActionResult> PostUser(string nome, string email, string cpfCnpj)
-        {
+        public async Task<IActionResult> PostUser(
+            string cpf, 
+            string nome, 
+            string rg,
+            string dataExpedicao,
+            string orgaoExpedicao,
+            string orgaoUf,
+            string dataNascimento,
+            string sexo,
+            string estadoCivil,
+            string cep,
+            string logradouro,
+            string numero,
+            string complemento,
+            string bairro,
+            string cidade,
+            string ufEstado
+            )
+        {           
+            string cpfFormatado = cpf.Replace(".", "").Replace("-", "");
             var userRequest = new UserFrontRequest
             {
-                nome = nome,
-                email = email,
-                cpfCnpj = cpfCnpj,
-                createAt = DateTime.UtcNow,
-                updateAt = DateTime.UtcNow,
+                Nome = nome,
+                CPF = cpfFormatado,
+                RG = rg,
+                Data_Expedicao = DateTime.Parse(dataExpedicao),
+                Orgao_Expedicao = orgaoExpedicao,
+                UF = orgaoUf,
+                DataNascimento = DateTime.Parse(dataNascimento),
+                Sexo = sexo,
+                Estado_Civil = estadoCivil,
+                    Endereco = new DadosEnderecoRequest
+                    {
+                        CEP = cep,
+                        Logradouro = logradouro,
+                        Numero = numero,
+                        Complemento= complemento,
+                        Bairro = bairro,
+                        Cidade = cidade,
+                        UF = ufEstado
+                    }
+
             };
 
             var result = await _userService.CreateUserAsync(userRequest);
@@ -80,9 +111,9 @@ namespace WebMVC.Controllers
             var userFront = new UserFront
             {
                 Nome = user.Nome,
-                Email = user.Email,
+               // Email = user.Email,
                 Id = user.Id,
-                CpfCnpj = user.CpfCnpj
+                //CpfCnpj = user.CpfCnpj
             };   
 
             return PartialView("~/Views/Home/EditarPessoa.cshtml", userFront);
@@ -91,11 +122,11 @@ namespace WebMVC.Controllers
         {
             var userRequest = new UserFrontRequest
             {
-                id = int.Parse(id),
-                nome = nome,
-                email = email,
-                cpfCnpj = cpfCnpj,               
-                updateAt = DateTime.UtcNow,
+                //id = int.Parse(id),
+               //nome = nome,
+                //email = email,
+               // cpfCnpj = cpfCnpj,               
+               // updateAt = DateTime.UtcNow,
             };
             var response = await _userService.PutUserAsync(userRequest);
 

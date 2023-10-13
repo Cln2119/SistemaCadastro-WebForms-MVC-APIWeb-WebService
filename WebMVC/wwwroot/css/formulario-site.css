@@ -73,3 +73,13 @@ h5 {
 .ajuste-select {
     margin-top: 5px;
 }
+
+.margin-gridview {
+    margin-top: 70px;
+}
+
+.mensagem-erro {
+    margin-top: 5px;
+    font-size: 13px;
+    color: red;
+}
