@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Z62IVnIviril8VnLO7Jk4RJLEDZrh+ka4D1C4r6QnxU=",
+  "Hash": "W2fLpCyaWR6aOTNSv8Akev8ZEjh6u9/8AZTDc2ZPB2I=",
   "Source": "3 - WebMVC",
   "BasePath": "_content/3 - WebMVC",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\git\\teste-gti\\WebMVC\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\3 - WebMVC.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\git\\teste-gti\\WebMVC\\wwwroot\\css\\formulario-site.css",
+      "SourceId": "3 - WebMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\git\\teste-gti\\WebMVC\\wwwroot\\",
+      "BasePath": "_content/3 - WebMVC",
+      "RelativePath": "css/formulario-site.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\formulario-site.css"
     },
     {
       "Identity": "C:\\git\\teste-gti\\WebMVC\\wwwroot\\css\\site.css",

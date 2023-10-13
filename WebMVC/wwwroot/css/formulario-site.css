@@ -10,11 +10,11 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-hr {   
-    opacity: 0.1; 
+hr {
+    opacity: 0.1;
 }
 
-.hr-margin-top{
+.hr-margin-top {
     margin-top: 25px;
 }
 
@@ -32,14 +32,15 @@ label {
     margin-top: 5px;
     color: #323233;
     font-size: 14px;
-    font-weight: 600;    
+    font-weight: 600;
 }
 
-button {    
-    position:absolute;
+button {
+    position: absolute;
     left: 72.5%;
     margin-bottom: 15px;
 }
+
 .btn-sucesso {
     background-color: #ADFF2F;
     border-color: #ADFF2F;
@@ -48,11 +49,12 @@ button {
     border-radius: 3px;
     padding: 12px;
 }
+
     .btn-sucesso:hover {
         background-color: #32CD32;
     }
 
-.margin-btn{
+.margin-btn {
     margin-top: 1px;
 }
 
@@ -60,17 +62,14 @@ h5 {
     color: #3538fc
 }
 
-.div-margin{
+.div-margin {
     padding-right: 0px;
 }
 
-.h5-margin{
+.h5-margin {
     margin-top: 15px;
 }
 
-.ajuste-select{
+.ajuste-select {
     margin-top: 5px;
 }
-
-
-

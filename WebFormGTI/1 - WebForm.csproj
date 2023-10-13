@@ -158,7 +158,7 @@
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\WebForms\DetailsView.js" />
     <Content Include="Scripts\WebForms\Focus.js" />
-    <Content Include="Scripts\WebForms\Formulario.js" />
+    <Content Include="Scripts\formulario.js" />
     <Content Include="Scripts\WebForms\GridView.js" />
     <Content Include="Scripts\WebForms\Menu.js" />
     <Content Include="Scripts\WebForms\MenuStandards.js" />
